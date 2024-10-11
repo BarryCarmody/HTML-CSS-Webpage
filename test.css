@@ -1,0 +1,427 @@
+body{
+    background-image: url("stars.jpg");
+    overflow: scroll;
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: rgb(255,234,31);
+    text-align: center;
+    margin: 0px 8px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 600;
+}
+
+img{
+  border: 4px solid rgb(255,234,31);
+}
+
+/*Navigation bar start*/
+.navbar{
+    overflow:hidden;
+    margin: auto;
+    width: 98%;
+    border: 2px solid rgb(255,234,31);
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.navbar a{
+    float: left;
+    display:block;
+    color: rgb(255,234,31);
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    width: 20%;
+    text-align: center;
+    padding: 14px 0px;
+    text-decoration: none;
+}
+
+.navbar a:visited{
+  color: rgb(255,234,31);
+  text-decoration: none;
+}
+
+.navbar a:hover{
+    color:rgb(0, 0, 0);
+    background-color: rgb(255,234,31);
+    text-decoration: none;
+    font-size: 110%;
+
+  }
+
+  .navbar a.active{
+    color: rgb(0,0,0);
+    background-color: rgb(255,234,31);
+  }
+
+  @media screen and (max-width: 1000px){
+
+    body{
+      margin:2px;
+    }
+    .navbar{
+      overflow:hidden;
+      margin: auto;
+      width: 99%;
+      border: 0.25vh solid rgb(255, 234, 31);
+  }
+  
+  .navbar a{
+      float: left;
+      font-size: 40px;
+  }
+
+  .navbar a:hover{
+    font-size: 40px;
+  }
+
+  }
+
+/*Navigation Bar ends*/
+/*Gallery Start*/
+/* Text Appears on images on hover code taken from Youtube video */
+/*https://www.youtube.com/watch?v=xo0748fNrts*/
+.imgBox img{
+  width: 200px;
+  height: 320px;
+  margin: 10px;
+  border: 4px solid rgb(255,234,31);
+  transition-duration: 0.5s ;
+  filter: none;
+  display:block;
+  
+}
+
+.imgBox img:hover{
+  transform: scale(1.1);
+  border: 4px solid rgb(255,234,31);
+  filter: grayscale(40%) blur(6px);
+  opacity: 100%;
+
+}
+
+.gallery{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  padding: 4px;
+}
+
+.gallery .box{
+  width: 200px;
+  height: 320px;
+  /*float: center;*/
+  position: relative;
+  padding: 20px;
+}
+
+.imgBox{
+  position: relative;
+}
+
+.imgBox img{
+  width: 100%;
+  transition: 0.5s;
+}
+
+.box:hover .imgBox img{
+  opacity:0.7;
+  transform: scale(1.15);
+}
+
+.content{
+  position:absolute;
+  width: 100%;
+  top: 35%;
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.content p{
+  margin: 0 0 10px;
+  padding: 0;
+  color: rgb(255,234,31);
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 22px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box:hover .content p{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+@media screen and (max-width: 1000px){
+
+  .content{
+    top: 20%
+  }
+
+  .content p{
+    font-size: 30px;
+  }
+
+}
+
+/* Gallery End */
+
+/* Footer start*/
+
+footer{
+  margin: 25px;
+  padding: 10px;
+  color: rgb(255,255,255);
+  font-size: 20px;
+}
+
+footer a{
+  color: rgb(67,165,207);
+  font-size: 20px;
+}
+
+footer a:hover{
+  color: rgb(116, 35, 170);
+}
+
+@media screen and (max-width: 1000px){
+
+  footer{
+    font-size: 30px;
+  }
+
+  footer a{
+    font-size: 30px;
+  }
+
+}
+
+/*Footer end */
+
+/* Template Box Start*/
+
+.whitebox{
+  background-color: rgb(255,255,255);
+  align-self: center;
+  max-width: 1000px;
+  width: 85%;
+  padding: 40px;
+  margin: 2%;
+  margin-bottom: 0%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.whiteboxleft{
+  background-color: rgb(255,255,255);
+  align-self: center;
+  max-width: 1000px;
+  width: 85%;
+  padding: 40px;
+  margin: 2%;
+  margin-bottom: 0%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:left;
+}
+
+.whitebox .intro{
+  width: 60%;
+  margin: 0%;
+  padding: 0px;
+  text-align: left;
+  display: block;
+}
+
+.title{
+  font-size: 3.5em;
+  font-weight: bolder;
+  color: rgb(67,165,207);
+  margin-right: 50px;
+}
+
+.whitebox .subtitle{
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(67,165,207);
+  
+}
+
+p{
+  font-size: 1.25em;
+  color: rgb(0,0,0);
+  text-align: justify;
+  margin: 8px;
+}
+
+
+.whitebox img{
+  width: 30%;
+  margin: 2%;
+  height: auto;
+  border: 8px solid rgb(255, 234, 31);
+  border-top: 8px solid rgb(197, 181, 42);
+  border-bottom: 8px solid rgb(197, 181, 42);
+}
+
+.whiteboxleft img{
+  height:140px; 
+  width:auto; 
+  margin-top: 10px;
+}
+
+.whiteboxleft .topright{
+  height:100px; 
+  width:auto; 
+}
+
+@media screen and (max-width: 1000px){
+
+  .title{
+  margin: 15px;
+  }
+
+  .whiteboxleft img{
+    height:auto; 
+    margin: 20px;
+  }
+
+
+}
+/*Template Box End*/
+/* Table Format Start*/
+
+#books{
+  
+  width: 95%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+  font-size: 1.25em;
+}
+
+#books th{
+  background-color: rgb(255,234,31);
+  padding: 8px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+
+#books tr:nth-child(odd){
+  background-color: rgb(189, 189, 189);
+}
+
+#books tr:hover{
+  font-size: 110%;
+  background-color: rgb(185, 255, 255);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1000px){
+  #books{
+  
+    width: 100%;
+    font-size: 1.75em;
+  }
+}
+
+/* Table Format End*/
+
+/*List*/
+
+ul{
+  font-size: 1.25em;
+  color: rgb(0, 0, 0);
+  padding:0px;
+  margin: 0px;
+  width: 90%;
+}
+
+/*List End*/
+
+/*Timeline*/
+#timeline{
+  width:100%;
+  height:auto;
+  transition: 0.5s;
+
+}
+
+#timeline:hover{
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+/*Timeline End*/
+
+/*Star Ratings*/
+#rating{
+  font-size: 300%;
+  margin-top: -40px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+#rating em{
+  font-style: normal;
+  color: rgb(255, 165, 0);
+}
+
+#stars{
+  display:block;
+  font-size: 2em;
+  color: rgb(0, 0, 0);
+  width:100%;
+
+}
+
+@media screen and (max-width: 1200px){
+
+  #ratings{
+  
+    margin-top: -40px;
+  }
+
+  .whiteboxleft .title{
+    margin-right: 0px;
+  }
+
+  .whiteboxleft .topright{
+    width:240px;
+    height:80px;
+    margin-left: 4px;
+  }
+
+
+}
+/*Star Ratings End*/
+
+/*Links*/
+a{
+  color:rgb(2, 184, 184);
+  text-decoration: underline;
+}
+
+a:visited{
+  color:rgb(2, 184, 184);
+  text-decoration: underline;
+}
